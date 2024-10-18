@@ -1,13 +1,103 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    color: white;
+}
+  body{
+    background:black;
+    padding: 64px 0;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.section-center{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    gap: 48px 64px;
+    justify-items: center;
 }
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.menu-item{
+    display: grid;
+    gap:8px 32px;
+    max-width: 400px;
+}
+.photo{
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+.title{
+    text-align: center;
+    margin-bottom: 64px;
+}
+.title h1{
+    font-family:'Playfair Display';
+    margin-bottom: 8px;
+}
+.underline{
+    height: 2px;
+    width: 60px;
+    background: white;
+    margin: auto;
+}
+
+.item-text{
+    color: gray;
+    font-family: 'Poppins';
+}
+.item-info header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 0 16px 0;
+    border-bottom: 1px solid white;
+    margin-bottom: 16px;
+}
+.item-info header h4{
+    font-family:'Playfair Display';
+    letter-spacing:1px;
+}
+.filter-btn{
+    padding: 8px 24px;
+    display: inline-block;
+    background: orangered;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px 8px;
+    cursor: pointer;
+}
+.btn-container{
+    margin-bottom: 64px;
+
+}
+
+@media screen and (min-width: 768px) {
+    .menu-item {
+        grid-template-columns: 225px 1fr;
+        gap: 0 1.25rem;
+        max-width: 40rem;
+    }
+    .photo {
+        height: 175px;
+    }
+    }
+@media screen and (min-width: 1200px) {
+    .section-center {
+        width: 95vw;
+        grid-template-columns: 1fr 1fr;
+    }
+    .photo {
+        height: 150px;
+    }
+    }
